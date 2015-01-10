@@ -1,0 +1,10 @@
+#!/bin/bash
+# Wrap execution of maven for unit and integration testing
+#
+# $1 low-order node of package name, e.g. sample6 for 
+#    package com.neopragma.javatypes.sample6
+#
+# $2 class name pattern to include, e.g. *Test, *IT
+
+
+mvn -Dtest="com.neopragma.javatypes.$1.$2" test
